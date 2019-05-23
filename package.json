@@ -1,0 +1,23 @@
+{
+  "name": "color-test",
+  "version": "1.0.0",
+  "description": "",
+  "author": "boton",
+  "license": "Unlicense",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "start": "parcel src/index.pug",
+    "build": "npm run clean && parcel build src/index.pug"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^9.5.1",
+    "parcel-bundler": "^1.12.3",
+    "postcss": "^7.0.16",
+    "postcss-nesting": "^7.0.0",
+    "pug": "^2.0.3"
+  }
+}
