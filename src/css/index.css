@@ -11,9 +11,9 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 *,
 *:before,
@@ -23,16 +23,16 @@ body {
 
 /* trace */
 .trace {
+  position: relative;
   background: url(https://pbs.twimg.com/media/D6Dz8XTUcAA4Wo6.jpg) top / cover
     no-repeat;
-  position: relative;
 
   &::before {
-    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(2555, 255, 255, 0.7);
+    content: '';
   }
 
   & .square {
@@ -48,9 +48,9 @@ body {
   & input {
     width: calc(100% / 6);
     height: 6rem;
-    border: 0;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    border: 0;
     cursor: pointer;
   }
 
@@ -78,8 +78,8 @@ body {
 /* grid */
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .square {
   padding-bottom: 100%;
@@ -87,25 +87,25 @@ body {
 
 /* style */
 .square:nth-child(1) {
-  background-color: var(--color1);
   position: relative;
   overflow: hidden;
+  background-color: var(--color1);
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
-    height: 100%;
     width: 100%;
+    height: 100%;
     border-radius: 50%;
+    content: '';
   }
   &::before {
-    background-color: var(--color2);
     left: -50%;
+    background-color: var(--color2);
   }
   &::after {
-    background-color: var(--color3);
     right: -50%;
+    background-color: var(--color3);
   }
 }
 .square:nth-child(2) {
@@ -123,17 +123,17 @@ body {
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
+    content: '';
   }
 
   &::before {
+    top: 25%;
+    left: 25%;
     width: 50%;
     height: 50%;
     border: solid var(--color5);
     border-radius: 50%;
-    top: 25%;
-    left: 25%;
   }
 
   &::after {
@@ -142,84 +142,84 @@ body {
     background: linear-gradient(to right, transparent 50%, var(--color6) 50%)
         no-repeat,
       linear-gradient(to left, transparent 50%, var(--color6) 50%) no-repeat;
-    background-size: 100% 50%;
     background-position: 0 0, 0 100%;
+    background-size: 100% 50%;
   }
 }
 .square:nth-child(4) {
-  background: radial-gradient(var(--color1) 35%, transparent 0) repeat-x,
-    linear-gradient(var(--color2) 50%, var(--color3) 50%);
-  background-size: 25% 25%, 100% 100%;
-  background-position: -16.5% 16.5%;
   position: relative;
   overflow: hidden;
+  background: radial-gradient(var(--color1) 35%, transparent 0) repeat-x,
+    linear-gradient(var(--color2) 50%, var(--color3) 50%);
+  background-position: -16.5% 16.5%;
+  background-size: 25% 25%, 100% 100%;
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
+    top: 50%;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    top: 50%;
+    content: '';
   }
   &::before {
-    background: var(--color6);
     top: 50%;
     right: 0%;
+    background: var(--color6);
   }
   & div {
     position: absolute;
-    background: var(--color3);
+    top: 50%;
     width: 50%;
     height: 50%;
-    top: 50%;
+    background: var(--color3);
   }
   &::after {
-    background: var(--color1);
     right: 50%;
+    background: var(--color1);
   }
 }
 .square:nth-child(5) {
-  background-color: var(--color2);
   position: relative;
   overflow: hidden;
+  background-color: var(--color2);
 
   &::before,
   &::after,
   & ::before,
   & ::after {
-    content: "";
     position: absolute;
-    border-radius: 50%;
     border: solid var(--color6);
+    border-radius: 50%;
+    content: '';
   }
 
   &::before {
-    height: 200%;
-    width: 200%;
     right: 0;
     bottom: 0;
+    width: 200%;
+    height: 200%;
     background: var(--color1);
     border: 0;
   }
   &::after {
-    height: 150%;
-    width: 150%;
     right: 25%;
     bottom: 25%;
+    width: 150%;
+    height: 150%;
   }
   & div::before {
-    height: 100%;
-    width: 100%;
     right: 50%;
     bottom: 50%;
+    width: 100%;
+    height: 100%;
   }
   & div::after {
-    height: 50%;
-    width: 50%;
-    left: -25%;
     top: -25%;
+    left: -25%;
+    width: 50%;
+    height: 50%;
   }
 }
 .square:nth-child(6) {
@@ -228,11 +228,11 @@ body {
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
-    height: 50%;
     width: 50%;
+    height: 50%;
     background: var(--color6);
+    content: '';
   }
 
   &::before {
@@ -256,29 +256,29 @@ body {
   }
 }
 .square:nth-child(7) {
-  background-color: var(--color6);
   position: relative;
   overflow: hidden;
+  background-color: var(--color6);
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
     border-radius: 50%;
+    content: '';
   }
 
   &::before {
-    height: 200%;
-    width: 200%;
-    right: 0;
     top: 0;
+    right: 0;
+    width: 200%;
+    height: 200%;
     background: var(--color5);
   }
   &::after {
-    height: 100%;
-    width: 101%;
-    left: -50%;
     bottom: -50%;
+    left: -50%;
+    width: 101%;
+    height: 100%;
     background: var(--color1);
   }
 }
@@ -287,58 +287,57 @@ body {
   overflow: hidden;
 
   &::before {
-    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, var(--color1) 50%, var(--color5) 50%)
         no-repeat,
       linear-gradient(to left, var(--color2) 50%, var(--color3) 50%) no-repeat;
-    background-size: 100% 50%;
     background-position: 0 0, 0 100%;
+    background-size: 100% 50%;
     transform: rotate(-45deg) scale(1.5, 1.5);
-    position: absolute;
+    content: '';
   }
 }
 .square:nth-child(9) {
-  background: var(--color4);
   position: relative;
+  background: var(--color4);
 
   &::before {
-    content: "";
     position: absolute;
+    top: 12.5%;
     right: 12.5%;
     bottom: 12.5%;
     left: 12.5%;
-    top: 12.5%;
-
     background-image: radial-gradient(var(--color5) 35%, transparent 0);
     background-size: 33.33% 33.33%;
-    background-postion: 0 0, 33% 33%;
+    content: '';
+    /* background-postion: 0 0, 33% 33%; */
   }
 }
 .square:nth-child(10) {
-  background: linear-gradient(var(--color5) 50%, var(--color6) 50%);
   position: relative;
   overflow: hidden;
+  background: linear-gradient(var(--color5) 50%, var(--color6) 50%);
 
   & div {
+    left: 25%;
     width: 50%;
     height: 50%;
-    left: 25%;
 
     &,
     &::before,
     &::after {
       position: absolute;
-      border-radius: 50%;
       border: solid var(--color1);
+      border-radius: 50%;
     }
 
     &::before,
     &::after {
-      content: "";
       width: 100%;
       height: 100%;
+      content: '';
     }
 
     &::before {
@@ -361,30 +360,28 @@ body {
   }
 }
 .square:nth-child(11) {
+  position: relative;
   background: radial-gradient(var(--color3) 26.5%, transparent 0) no-repeat,
     radial-gradient(var(--color2) 62%, transparent 0) no-repeat, var(--color1);
-  position: relative;
 
   &::before {
-    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     background: linear-gradient(-45deg, var(--color4) 50%, transparent 0);
+    content: '';
   }
 }
 .square:nth-child(12) {
-  background: var(--color3);
   position: relative;
+  background: var(--color3);
 
   &::before {
-    content: "";
     position: absolute;
+    top: 12.5%;
     right: 12.5%;
     bottom: 12.5%;
     left: 12.5%;
-    top: 12.5%;
-
     background: radial-gradient(var(--color5) 35%, transparent 0) no-repeat,
       radial-gradient(var(--color5) 35%, transparent 0) no-repeat,
       radial-gradient(var(--color2) 35%, transparent 0) no-repeat,
@@ -394,58 +391,59 @@ body {
       radial-gradient(var(--color2) 35%, transparent 0) no-repeat,
       radial-gradient(var(--color5) 35%, transparent 0) no-repeat,
       radial-gradient(var(--color5) 35%, transparent 0) no-repeat;
-    background-size: 33.33% 33.33%;
     background-position: 0 0, 50% 0, 100% 0, 0 50%, 50%, 100% 50%, 0 100%,
       50% 100%, 100% 100%;
+    background-size: 33.33% 33.33%;
+    content: '';
   }
 }
 .square:nth-child(13) {
-  background-color: var(--color6);
   position: relative;
   overflow: hidden;
+  background-color: var(--color6);
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
-    height: 100%;
     width: 100%;
+    height: 100%;
     border-radius: 50%;
+    content: '';
   }
   &::before {
-    background-color: var(--color5);
     left: -50%;
+    background-color: var(--color5);
   }
   &::after {
+    right: -50%;
     background: linear-gradient(to bottom, var(--color4) 50%, var(--color1) 50%)
       no-repeat;
-    right: -50%;
   }
 }
 .square:nth-child(14) {
-  background-color: var(--color5);
   position: relative;
+  background-color: var(--color5);
 
   &::before,
   &::after {
-    content: "";
     position: absolute;
+    content: '';
   }
 
   &::before {
-    background-color: var(--color2);
+    top: 18.5%;
     right: 18.5%;
     bottom: 18.5%;
     left: 18.5%;
-    top: 18.5%;
+    background-color: var(--color2);
   }
   &::after {
-    background-color: var(--color1);
-    border-radius: 50%;
+    top: 31.5%;
     right: 31.5%;
     bottom: 31.5%;
     left: 31.5%;
-    top: 31.5%;
+    background-color: var(--color1);
+    border-radius: 50%;
   }
 }
 .square:nth-child(15) {
@@ -455,7 +453,7 @@ body {
     radial-gradient(var(--color5) 55%, transparent 0) no-repeat,
     radial-gradient(var(--color4) 55%, transparent 0) no-repeat,
     radial-gradient(var(--color5) 55%, transparent 0) no-repeat, var(--color3);
-  background-size: 33.33% 33.33%;
   background-position: 12.5% 12.5%, 69% 12.5%, 125% 12.5%, -25% 87.5%, 31% 87.5%,
     87.5% 87.5%;
+  background-size: 33.33% 33.33%;
 }
