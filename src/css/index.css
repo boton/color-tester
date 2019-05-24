@@ -21,7 +21,7 @@ body {
   box-sizing: inherit;
 }
 
-/* trace */
+/* trace
 .trace {
   position: relative;
   background: url(https://pbs.twimg.com/media/D6Dz8XTUcAA4Wo6.jpg) top / cover
@@ -39,6 +39,7 @@ body {
     z-index: 1;
   }
 }
+*/
 
 /* Inferface */
 .controls {
